@@ -1,2 +1,29 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<div id="form">
+  <div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    <%= form_for @user do |f| %>
+    <% custom_erros(@user) %>
+    <%= f.text_field :name, placeholder: 'Username' %>
+     <div class="error" id="title_error"><%= @name_error.to_s.html_safe %></div>
+    <%= f.text_field :email, placeholder: 'E-mail' %>
+    <div class="error" id="title_error"><%= @email_error.to_s.html_safe %></div>
+    <%= f.password_field :password, placeholder: 'Password' %>
+    <div class="error" id="title_error"><%= @password_error.to_s.html_safe %></div>
+    <%= f.password_field :password_confirmation, placeholder: 'Password Confirmation' %>
+    <div class="error" id="title_error"><%= @password_confir_error.to_s.html_safe %></div>
+    <%= f.submit "Sign me up"%>
+    <% end %>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+  <div class="or">OR</div>
+</div>
+</div>
