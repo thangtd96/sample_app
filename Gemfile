@@ -16,7 +16,18 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem "rspec-rails"
+  gem 'factory_girl_rails', '~> 4.8'
 end
+
+group :test do
+    gem "faker"
+    gem "capybara"
+    gem "database_cleaner"
+    gem "launchy"
+    gem "selenium-webdriver"
+    gem 'shoulda-matchers', '~> 3.0', require: false
+  end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
