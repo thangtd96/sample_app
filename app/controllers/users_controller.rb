@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.select(:id, :name, :email)
-                 .order(:name).paginate(page: params[:page], per_page: Settings.paginate)
+    @users = User.select(:id, :name, :email).activated
+             .order(:name).paginate page: params[:page], per_page: Settings.paginate
   end
 
   def new
@@ -19,8 +19,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:danger] =  t "flash.create"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "flash.mail"
+      redirect_to root_url
     else
       flash.now[:danger] =  t "flash.not_create"
       render :new
