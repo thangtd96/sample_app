@@ -7,7 +7,6 @@ vi:
       language_en: "En"
       language_vi: "Vi"
       logo: "TDT"
-      sign_in: "Đăng nhập"
   title:
     home: "Trang chủ"
     about: "Giới Thiệu"
@@ -35,6 +34,7 @@ vi:
   users:
     new:
       button: "Đăng Kí"
+      button_1: "Đăng nhập"
       facebook: "Đăng nhập với facebook"
       google: "Đăng nhập với Google"
       or: "Hoặc"
@@ -42,5 +42,6 @@ vi:
       placeholder_name: "Tên tài khoản"
       placeholder_password: "Mật khẩu"
       placeholder_password_confirmation: "Nhập lại mật khẩu"
+      sign_in: "Đăng nhập"
       title: "Tạo Tài khoản"
       twitter: Đăng nhập với twitter"

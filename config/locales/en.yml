@@ -5,6 +5,7 @@ en:
       help: "Help"
       home: "Home"
       sign_in: "Sign In?"
+      sign_out: "Sign out"
       language_en: "En"
       language_vi: "Vi"
       logo: "TDT"
@@ -21,6 +22,7 @@ en:
   users:
     new:
       button: "Signup"
+      button_1: "Login"
       facebook: "Login with facebook"
       google: "Login with Google"
       or: "OR"
@@ -28,5 +30,6 @@ en:
       placeholder_password: "Password"
       placeholder_email: "Email"
       placeholder_password_confirmation: "Password confirmation"
+      sign_in: "Login"
       title: "Sign up"
       twitter: "Login with twitter"
