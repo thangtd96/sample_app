@@ -1,0 +1,4 @@
+validates:
+  max_size_name: 50
+  min_size_pass: 6
+  max_size_email: 255
