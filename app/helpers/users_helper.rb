@@ -13,4 +13,5 @@ module UsersHelper
       @password_confir_error = msg[1].last if msg[0].eql? :password_confirmation
     end if user.errors.any?
   end
+
 end

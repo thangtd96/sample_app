@@ -34,4 +34,5 @@ RSpec.describe UsersController, type: :controller do
       it {expect(response).to redirect_to user_path 66}
     end
   end
+
 end

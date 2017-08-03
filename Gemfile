@@ -41,3 +41,6 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "twitter-bootstrap-rails"
 gem "config", "~> 1.4"
+gem "faker"
+gem "will_paginate", "3.1.5"
+gem "bootstrap-will_paginate", "1.0.0"
