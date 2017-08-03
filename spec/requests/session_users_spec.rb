@@ -1,4 +1,5 @@
 require "rails_helper"
+
 RSpec.describe "UsersSignups", type: :request do
   describe "GET /login" do
     it "works! (now write some real specs)" do
@@ -27,6 +28,19 @@ RSpec.describe "UsersSignups", type: :request do
           expect(response.body).to include login_path
           expect(response.body).not_to include logout_path
         end
+      end
+      context "login with remembering" do
+        before do
+          post login_path, params: {sessions: {email: user.email, password: user.password, remember_me: "1"}}
+        end
+        it {expect(response.cookies["remember_token"]).not_to eq nil}
+      end
+      context "login without remembering" do
+        before do
+          post login_path, params: {sessions: {email: user.email, password: user.password, remember_me: "1"}}
+          post login_path, params: {sessions: {email: user.email, password: user.password, remember_me: "0"}}
+        end
+        it {expect(response.cookies["remember_token"]).to eq nil}
       end
   end
 end
