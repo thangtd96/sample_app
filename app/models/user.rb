@@ -1,9 +1,12 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  has_many :microposts, dependent: :destroy
+
   before_create :create_activation_digest
   before_save {email.downcase!}
   has_secure_password
+
   enum role: [:user, :admin]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,

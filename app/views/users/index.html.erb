@@ -1,8 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="notice"><%= render "shared/messages_errores", flash: flash %></div>
+    <div class="col-md-8 col-md-offset-2">
+      <% if logged_in? %>
+        <%= form_for @micropost do |f| %>
+          <%= f.text_area :content, cols: Settings.avatar, rows: Settings.paginate %><br>
+          <%= f.submit t("post.post"), class: "btn btn-primary" %>
+        <% end %>
+        <p class="hr-page"></p>
+      <% end %>
+    </div>
     <% @users.each do |user| %>
-      <div class="col-md-8 content-index">
+      <div class="col-md-8 col-md-offset-2">
 
         <p class="lead">
           <%= link_to user do %>
