@@ -1,29 +1,34 @@
-
 <div id="form">
   <div id="login-box">
   <div class="left">
-    <h1>Sign up</h1>
-    <%= form_for @user do |f| %>
-    <% custom_erros(@user) %>
-    <%= f.text_field :name, placeholder: 'Username' %>
-     <div class="error" id="title_error"><%= @name_error.to_s.html_safe %></div>
-    <%= f.text_field :email, placeholder: 'E-mail' %>
-    <div class="error" id="title_error"><%= @email_error.to_s.html_safe %></div>
-    <%= f.password_field :password, placeholder: 'Password' %>
-    <div class="error" id="title_error"><%= @password_error.to_s.html_safe %></div>
-    <%= f.password_field :password_confirmation, placeholder: 'Password Confirmation' %>
-    <div class="error" id="title_error"><%= @password_confir_error.to_s.html_safe %></div>
-    <%= f.submit "Sign me up"%>
-    <% end %>
+    <div class="fomr-box">
+      <h1><%= t ".title" %></h1>
+      <%= form_for @user do |f| %>
+
+        <%= f.text_field :name, placeholder: t(".placeholder_name") %>
+        <%= content_tag :p, @name_error %>
+
+        <%= f.text_field :email, placeholder: t(".placeholder_email") %>
+        <%= content_tag :p, @email_error %>
+
+        <%= f.password_field :password, placeholder: t(".placeholder_password") %>
+        <%= content_tag :p, @password_error %>
+
+        <%= f.password_field :password_confirmation, placeholder: t(".placeholder_password_confirmation") %>
+        <%= content_tag :p, @password_confir_error %>
+
+        <%= f.submit t ".button"%>
+      <% end %>
+    </div>
   </div>
-  
+
   <div class="right">
-    <span class="loginwith">Sign in with<br />social network</span>
-    
-    <button class="social-signin facebook">Log in with facebook</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
+    <div class="btn-right">
+      <button class="social-signin facebook"><%= t ".facebook" %></button>
+      <button class="social-signin twitter"><%= t ".twitter" %></button>
+      <button class="social-signin google"><%= t ".google" %></button>
+    </div>
   </div>
-  <div class="or">OR</div>
+  <div class="or"><%= t ".or" %></div>
 </div>
 </div>
