@@ -27,6 +27,8 @@ group :test do
     gem "launchy"
     gem "selenium-webdriver"
     gem "shoulda-matchers", "~> 3.0", require: false
+    gem "rails-controller-testing"
+    gem "rspec-html-matchers"
   end
 
 group :development do

@@ -1,0 +1,20 @@
+vi:
+  layouts:
+    header:
+      home: "Trang chủ"
+      help: "Trợ Giúp"
+      about: "Giới Thiệu"
+      sign_in: "Đăng nhập"
+      language_en: "En"
+      language_vi: "Vi"
+      logo: "TDT"
+  title:
+    home: "Trang chủ"
+    about: "Giới Thiệu"
+    help: "Trợ Giúp"
+  home:
+    by: "bởi"
+    posted_on: "Đăng ngày"
+    btb_read_more: "Xem thêm"
+    search: "Tìm Kiếm"
+    post_popular: "Bài viết phổ biến"
