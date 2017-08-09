@@ -1,0 +1,27 @@
+<div id="form">
+  <div id="login-box">
+  <div class="left">
+    <h1><%= t "views.users.new.title" %></h1>
+    <%= form_for @user do |f| %>
+    <% custom_erros(@user) %>
+    <%= f.text_field :name, placeholder: "#{I18n.t "views.users.new.placeholder.name"}" %>
+     <div class="error" id="title_error"><%= @name_error.to_s.html_safe %></div>
+    <%= f.text_field :email, placeholder: "E-mail" %>
+    <div class="error" id="title_error"><%= @email_error.to_s.html_safe %></div>
+    <%= f.password_field :password, placeholder: "#{I18n.t "views.users.new.placeholder.password"}" %>
+    <div class="error" id="title_error"><%= @password_error.to_s.html_safe %></div>
+    <%= f.password_field :password_confirmation, placeholder: "#{I18n.t "views.users.new.placeholder.password_confirmation"}" %>
+    <div class="error" id="title_error"><%= @password_confir_error.to_s.html_safe %></div>
+    <%= f.submit t "views.users.new.button"%>
+    <% end %>
+  </div>
+
+  <div class="right">
+    <span class="loginwith"><%= t "views.users.new.title_social_t" %><br /><%= t "views.users.new.title_social_b" %></span>
+    <button class="social-signin facebook"><%= t "views.users.new.facebook" %></button>
+    <button class="social-signin twitter"><%= t "views.users.new.twitter" %></button>
+    <button class="social-signin google"><%= t "views.users.new.google" %></button>
+  </div>
+  <div class="or">OR</div>
+</div>
+</div>

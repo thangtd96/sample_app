@@ -1,0 +1,49 @@
+vi:
+  layouts:
+    header:
+      home: "Trang chủ"
+      help: "Trợ Giúp"
+      about: "Giới Thiệu"
+      sign_in: "Đăng nhập"
+      language_en: "En"
+      language_vi: "Vi"
+      logo: "TDT"
+  title:
+    home: "Trang chủ"
+    about: "Giới Thiệu"
+    help: "Trợ Giúp"
+  home:
+    by: "bởi"
+    posted_on: "Đăng ngày"
+    btb_read_more: "Xem thêm"
+    search: "Tìm Kiếm"
+    post_popular: "Bài viết phổ biến"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'Vui lòng điền đầy đủ họ tên'
+            email:
+              invalid: "Email không hợp lệ"
+            password:
+              too_short: "Mật khẩu quá ngắn - Tối thiểu là 6 kí tự."
+            password_confirmation:
+              too_short: "Mật khẩu quá ngắn - Tối thiểu là 6 kí tự."
+              confirmation: "Mật khâu không trùng nhau."
+  views:
+    users:
+      new:
+        title: "Tạo Tài khoản"
+        title_social_t: "Đăng nhập với "
+        title_social_b: "mạng xã hội"
+        placeholder:
+          name: "Tên tài khoản"
+          password: "Mật khẩu"
+          password_confirmation: "Nhập lại mật khẩu"
+        button: "Đăng Kí"
+        facebook: "Đăng nhập với facebook"
+        twitter: Đăng nhập với twitter"
+        google: "Đăng nhập với Google"
+
