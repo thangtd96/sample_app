@@ -1,20 +1,32 @@
 en:
   layouts:
     header:
-      home: "Home"
-      help: "Help"
       about: "About"
+      help: "Help"
+      home: "Home"
       sign_in: "Sign In?"
       language_en: "En"
       language_vi: "Vi"
       logo: "TDT"
   title:
-    home: "Home"
-    help: "Help"
     about: "About"
+    help: "Help"
+    home: "Home"
   home:
+    btb_read_more: "Read More"
     by: "by"
     posted_on: "Posted on"
-    btb_read_more: "Read More"
-    search:  "Search"
     post_popular: "Popular news"
+    search:  "Search"
+  users:
+    new:
+      button: "Signup"
+      facebook: "Login with facebook"
+      google: "Login with Google"
+      or: "OR"
+      placeholder_name: "Name"
+      placeholder_password: "Password"
+      placeholder_email: "Email"
+      placeholder_password_confirmation: "Password confirmation"
+      title: "Sign up"
+      twitter: "Login with twitter"

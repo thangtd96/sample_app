@@ -1,20 +1,46 @@
 vi:
   layouts:
     header:
-      home: "Trang chủ"
-      help: "Trợ Giúp"
       about: "Giới Thiệu"
-      sign_in: "Đăng nhập"
+      help: "Trợ Giúp"
+      home: "Trang chủ"
       language_en: "En"
       language_vi: "Vi"
       logo: "TDT"
+      sign_in: "Đăng nhập"
   title:
     home: "Trang chủ"
     about: "Giới Thiệu"
     help: "Trợ Giúp"
   home:
+    btb_read_more: "Xem thêm"
     by: "bởi"
     posted_on: "Đăng ngày"
-    btb_read_more: "Xem thêm"
-    search: "Tìm Kiếm"
     post_popular: "Bài viết phổ biến"
+    search: "Tìm Kiếm"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'Vui lòng điền đầy đủ họ tên'
+            email:
+              invalid: "Email không hợp lệ"
+            password:
+              too_short: "Mật khẩu xác nhận quá ngắn..."
+            password_confirmation:
+              confirmation: "Mật khẩu và xác nhận mật khẩu không trùng nhau"
+              too_short: "Mật khẩu quá ngắn - Tối thiểu là 6 kí tự."
+  users:
+    new:
+      button: "Đăng Kí"
+      facebook: "Đăng nhập với facebook"
+      google: "Đăng nhập với Google"
+      or: "Hoặc"
+      placeholder_email: "Email"
+      placeholder_name: "Tên tài khoản"
+      placeholder_password: "Mật khẩu"
+      placeholder_password_confirmation: "Nhập lại mật khẩu"
+      title: "Tạo Tài khoản"
+      twitter: Đăng nhập với twitter"
