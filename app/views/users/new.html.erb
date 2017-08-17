@@ -5,6 +5,8 @@
       <h1><%= t ".title" %></h1>
       <%= form_for @user do |f| %>
 
+        <% custom_erros @user %>
+
         <%= f.text_field :name, placeholder: t(".placeholder_name") %>
         <%= content_tag :p, @name_error %>
 
