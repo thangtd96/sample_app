@@ -33,3 +33,5 @@ en:
       sign_in: "Login"
       title: "Sign up"
       twitter: "Login with twitter"
+    create:
+      remember_me: "Remember password?"

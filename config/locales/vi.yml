@@ -4,6 +4,7 @@ vi:
       about: "Giới Thiệu"
       help: "Trợ Giúp"
       home: "Trang chủ"
+      sign_in: "Đăng nhập"
       language_en: "En"
       language_vi: "Vi"
       logo: "TDT"
@@ -44,4 +45,6 @@ vi:
       placeholder_password_confirmation: "Nhập lại mật khẩu"
       sign_in: "Đăng nhập"
       title: "Tạo Tài khoản"
-      twitter: Đăng nhập với twitter"
+      twitter: "Đăng nhập với twitter"
+    create:
+      remember_me: "Nhớ mật khẩu?"
