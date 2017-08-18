@@ -2,6 +2,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   before_save {email.downcase!}
   has_secure_password
+  enum role: [:user, :admin]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
     length: {maximum: Settings.validates.maximum_email},
