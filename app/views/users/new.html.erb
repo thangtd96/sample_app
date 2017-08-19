@@ -1,0 +1,36 @@
+<div id="form">
+  <div id="login-box">
+  <div class="left">
+    <div class="fomr-box">
+      <h1><%= t ".title" %></h1>
+      <%= form_for @user do |f| %>
+
+        <% custom_erros @user %>
+
+        <%= f.text_field :name, placeholder: t(".placeholder_name") %>
+        <%= content_tag :p, @name_error %>
+
+        <%= f.text_field :email, placeholder: t(".placeholder_email") %>
+        <%= content_tag :p, @email_error %>
+
+        <%= f.password_field :password, placeholder: t(".placeholder_password") %>
+        <%= content_tag :p, @password_error %>
+
+        <%= f.password_field :password_confirmation, placeholder: t(".placeholder_password_confirmation") %>
+        <%= content_tag :p, @password_confir_error %>
+
+        <%= f.submit t ".button"%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="btn-right">
+      <button class="social-signin facebook"><%= t ".facebook" %></button>
+      <button class="social-signin twitter"><%= t ".twitter" %></button>
+      <button class="social-signin google"><%= t ".google" %></button>
+    </div>
+  </div>
+  <div class="or"><%= t "users.new.or" %></div>
+</div>
+</div>

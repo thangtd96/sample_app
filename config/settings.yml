@@ -1,0 +1,8 @@
+avatar: 50
+size:
+  avatar: 80
+paginate: 5
+validates:
+  maximum_name: 50
+  maximum_email: 255
+  minimum_password: 6

@@ -1,0 +1,155 @@
+@import 'variables/color';
+
+#form {
+  *:focus {
+    outline: none;
+  }
+  margin-top: 8%;
+
+  #login-box {
+    background: $login-box-bg;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    height: 494px;
+    margin: 5% auto;
+    position: relative;
+    width: 600px;
+  }
+
+  .left {
+    box-sizing: border-box;
+    background-color: burlywood;
+    height: 494px;
+    padding: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+  }
+
+  input[type=text],
+  input[type=password] {
+    border: none;
+    border-bottom: 1px solid $input-form;
+    box-sizing: border-box;
+    display: block;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 32px;
+    margin-bottom: 20px;
+    padding: 4px;
+    transition: 0.2s ease;
+    width: 220px;
+  }
+
+  input[type=text]:focus,
+  input[type=password]:focus {
+    border-bottom: 2px solid $input-form-1;
+    color: $input-form-1;
+    transition: 0.2s ease;
+  }
+
+  input[type=submit] {
+    border-radius: 2px;
+    border: none;
+    background: $input-form-1;
+    color: $login-box-bg;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;font-weight: 500;
+    height: 32px;
+    margin-top: 28px;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    width: 120px;
+  }
+
+  input[type=submit]:hover,
+  input[type=submit]:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+    opacity: 0.8;
+  }
+
+  input[type=submit]:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+    opacity: 1;
+  }
+
+  .or {
+    background: $body-bg;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    height: 40px;
+    line-height: 40px;
+    left: 280px;
+    position: absolute;
+    top: 180px;
+    text-align: center;
+    width: 40px;
+  }
+
+  .right {
+    background: url('https://goo.gl/YbktSj');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border-radius: 0 2px 2px 0;
+    height: 494px;
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+  }
+
+  .btn-right {
+    margin-top:41%;
+  }
+
+  .fomr-box {
+    margin-top: -12%;
+  }
+
+  button.social-signin {
+    border: none;
+    color: $login-box-bg;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    height: 36px;
+    transition: 0.2s ease;
+    width: 220px;
+  }
+
+  button.social-signin:hover,
+  button.social-signin:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+  }
+
+  button.social-signin:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+  }
+
+  button.social-signin.facebook {
+    background: $bg-fb;
+  }
+
+  button.social-signin.twitter {
+    background: $bg-twitter;
+  }
+
+  button.social-signin.google {
+    background: $bg-gg;
+  }
+}

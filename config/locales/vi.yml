@@ -1,0 +1,76 @@
+vi:
+  layouts:
+    header:
+      about: "Giới Thiệu"
+      help: "Trợ Giúp"
+      home: "Trang chủ"
+      language_en: "En"
+      language_vi: "Vi"
+      logo: "TDT"
+      profile: "Trang cá nhân"
+      setting: "Chỉnh sửa"
+      sign_in: "Đăng nhập"
+      sign_out: "Đăng xuất"
+  title:
+    about: "Giới Thiệu"
+    home: "Trang chủ"
+    help: "Trợ Giúp"
+  home:
+    btb_read_more: "Xem thêm"
+    by: "bởi"
+    posted_on: "Đăng ngày"
+    post_popular: "Bài viết phổ biến"
+    search: "Tìm Kiếm"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'Vui lòng điền đầy đủ họ tên'
+            email:
+              invalid: "Email không hợp lệ"
+            password:
+              too_short: "Mật khẩu xác nhận quá ngắn..."
+            password_confirmation:
+              confirmation: "Mật khẩu và xác nhận mật khẩu không trùng nhau"
+              too_short: "Mật khẩu quá ngắn - Tối thiểu là 6 kí tự."
+  users:
+    new:
+      button: "Đăng Kí"
+      button_1: "Đăng nhập"
+      button_2: "Xác nhận"
+      facebook: "Đăng nhập với facebook"
+      google: "Đăng nhập với Google"
+      or: "Hoặc"
+      placeholder_email: "Email"
+      placeholder_name: "Tên tài khoản"
+      placeholder_password: "Mật khẩu"
+      placeholder_password_confirmation: "Nhập lại mật khẩu"
+      sign_in: "Đăng nhập"
+      title: "Tạo Tài khoản"
+      title_1: "Sửa Tài khoản"
+      twitter: "Đăng nhập với twitter"
+    create:
+      remember_me: "Nhớ mật khẩu?"
+  flash:
+    delete: "Bạn có chắc chắn xóa không?"
+    danger: "Tài khoản không hiện có:("
+    deleted: "Tài khoản đã bị xóa."
+    not_delete: "Bạn không có quyền xóa."
+    not_create: "Đã có lỗi.Xin vui lòng xem lại."
+    create: "Tạo thành công."
+    not_update: "Cập nhật không thành công."
+    login: "Xin vui lòng đăng nhập để tiếp tục!"
+    update: "Cập nhật thành công!"
+  index:
+    delete: "Xoa tài khoản"
+    mail: "Vui lòng kiểm tra email để kích hoạt tài khoản."
+  mailler:
+    activate: "Mở tài khoản."
+    activated: "tài khoản chưa được kích hoạt."
+    activated_1: "Kiểm tra email của bạn để kích hoạt."
+    activated_2: "Kích hoạt tài khoản"
+    h1: "Đặt lại mật khẩu."
+    p: "Xin chào."
+    p1: "Xin chào đã đến nơi này bấm đường dẫn để kích hoạt tài khoản:"
