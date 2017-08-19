@@ -57,7 +57,7 @@ vi:
     delete: "Bạn có chắc chắn xóa không?"
     danger: "Tài khoản không hiện có:("
     deleted: "Tài khoản đã bị xóa."
-  not_delete: "Bạn không có quyền xóa."
+    not_delete: "Bạn không có quyền xóa."
     not_create: "Đã có lỗi.Xin vui lòng xem lại."
     create: "Tạo thành công."
     not_update: "Cập nhật không thành công."
@@ -65,3 +65,12 @@ vi:
     update: "Cập nhật thành công!"
   index:
     delete: "Xoa tài khoản"
+    mail: "Vui lòng kiểm tra email để kích hoạt tài khoản."
+  mailler:
+    activate: "Mở tài khoản."
+    activated: "tài khoản chưa được kích hoạt."
+    activated_1: "Kiểm tra email của bạn để kích hoạt."
+    activated_2: "Kích hoạt tài khoản"
+    h1: "Đặt lại mật khẩu."
+    p: "Xin chào."
+    p1: "Xin chào đã đến nơi này bấm đường dẫn để kích hoạt tài khoản:"
