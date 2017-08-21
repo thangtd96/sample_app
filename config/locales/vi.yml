@@ -67,10 +67,16 @@ vi:
     delete: "Xoa tài khoản"
     mail: "Vui lòng kiểm tra email để kích hoạt tài khoản."
   mailler:
-    activate: "Mở tài khoản."
+    activate: "Mở tài khoản"
     activated: "tài khoản chưa được kích hoạt."
     activated_1: "Kiểm tra email của bạn để kích hoạt."
     activated_2: "Kích hoạt tài khoản"
     h1: "Đặt lại mật khẩu."
     p: "Xin chào."
     p1: "Xin chào đã đến nơi này bấm đường dẫn để kích hoạt tài khoản:"
+    p2: "Xin chào đã đến nơi này bấm đường dẫn để Đặt lại mật khẩu:"
+    p3: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và Mật khẩu của bạn sẽ vẫn như nó được."
+  reset:
+    password_reset: "Đặt lại mật khẩu"
+    password: "Forgot password?"
+    reset_flash: "Email sent with password reset instructions"
