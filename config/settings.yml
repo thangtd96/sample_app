@@ -7,3 +7,6 @@ validates:
   maximum_email: 255
   minimum_password: 6
 reset_hour: 2
+image:
+  height: 250
+  width: 750
