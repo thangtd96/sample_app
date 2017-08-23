@@ -1,0 +1,16 @@
+<ul class="nav navbar-nav navbar-right animated pulse header-right">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <% if params[:locale].eql? "vi" %>
+      <span><%= t "layouts.header.language_vi" %></span>
+    <% else %>
+      <span><%= t "layouts.header.language_en" %></span>
+    <% end %>
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><%= link_to t("layouts.header.language_en"), locale: "en" %></li>
+      <li><%= link_to t("layouts.header.language_vi"), locale: "vi" %></li>
+    </ul>
+  </li>
+</ul>

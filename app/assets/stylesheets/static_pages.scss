@@ -1,0 +1,29 @@
+@import 'variables/color';
+.page-header {
+  border-bottom: 1px solid $border;
+  margin: 88px 0 20px;
+  padding-bottom: 9px;
+}
+
+footer {
+  margin-top: 3%;
+}
+
+.switch-language a {
+  color: $language !important;
+  display: inline-block !important;
+}
+
+.header-right {
+  float: right !important;
+  margin-right: -9%;
+}
+
+.navbar-right~.navbar-right {
+  margin-right: -54px;
+}
+
+.hr-page {
+  border-top: 1px solid $border;
+  width: 56%;
+}

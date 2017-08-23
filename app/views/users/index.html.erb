@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="notice"><%= render "shared/messages_errores", flash: flash %></div>
+    <div class="col-md-8 col-md-offset-2">
+      <% if logged_in? %>
+        <%= form_for @micropost do |f| %>
+          <%= f.text_area :content, cols: Settings.avatar, rows: Settings.paginate %><br>
+          <%= f.submit t("post.post"), class: "btn btn-primary" %>
+        <% end %>
+        <p class="hr-page"></p>
+      <% end %>
+    </div>
+    <% @users.each do |user| %>
+      <div class="col-md-8 col-md-offset-2">
+
+        <p class="lead">
+          <%= link_to user do %>
+            <%= gravatar_for user, size: Settings.avatar %>
+          <% end %>
+          <%= t "home.by" %><%= link_to user.name, user %>
+          <% if current_user %>
+            <% if current_user.admin? && !current_user?(user) %>
+              |<%= link_to t("index.delete"), user, method: :delete, class: "btn btn-danger",
+              data: {confirm: t("flash.delete")} %>
+            <% end %>
+          <% end %>
+        </p>
+        <div class="hr-page">
+          <p>
+            <span class="glyphicon glyphicon-time"></span><%= t "home.posted_on" %>
+          </p>
+        </div>
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="image post">
+        <p></p>
+        <a class="btn btn-primary" href="#"><%= t "home.btb_read_more" %>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        <ul class="pager">
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= will_paginate %>
