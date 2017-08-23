@@ -61,9 +61,18 @@ en:
     p2: "Welcome to the Sample App! Click on the link below to reset password:"
     p3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   reset:
+    flash: "Password has been reset."
+    flash_1: "Password reset has expired."
     password_reset: "Password reset"
     password: "Forgot password?"
     password_2: "can't be empty"
     reset_flash: "Email sent with password reset instructions"
-    flash: "Password has been reset."
-    flash_1: "Password reset has expired."
+  post:
+    ago: "ago"
+    flash_success: "Micropost created!"
+    flash_danger: "Micropost deleted"
+    post: "Post"
+    microposts: "Microposts"
+  picture:
+    file_size: "Maximum file size is 5MB. Please choose a smaller file."
+
