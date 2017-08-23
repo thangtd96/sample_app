@@ -73,3 +73,11 @@ en:
     flash_danger: "Micropost deleted"
     post: "Post"
     microposts: "Microposts"
+  picture:
+    file_size: "Maximum file size is 5MB. Please choose a smaller file."
+  follow:
+    follower: "followers"
+    followed: "following"
+    button_follow: "Follow"
+    button_unfollow: "UnFollow"
+

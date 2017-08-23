@@ -5,22 +5,23 @@
       <% if logged_in? %>
         <%= form_for @micropost do |f| %>
           <%= f.text_area :content, cols: Settings.avatar, rows: Settings.paginate %><br>
+          <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %><br>
           <%= f.submit t("post.post"), class: "btn btn-primary" %>
         <% end %>
         <p class="hr-page"></p>
       <% end %>
     </div>
-    <% @users.each do |user| %>
+    <% @microposts.each do |micropost| %>
       <div class="col-md-8 col-md-offset-2">
 
         <p class="lead">
-          <%= link_to user do %>
-            <%= gravatar_for user, size: Settings.avatar %>
+          <%= link_to micropost.user do %>
+            <%= gravatar_for micropost.user, size: Settings.avatar %>
           <% end %>
-          <%= t "home.by" %><%= link_to user.name, user %>
+          <%= t "home.by" %><%= link_to micropost.user.name, micropost.user %>
           <% if current_user %>
-            <% if current_user.admin? && !current_user?(user) %>
-              |<%= link_to t("index.delete"), user, method: :delete, class: "btn btn-danger",
+            <% if current_user.admin? && !current_user?(micropost.user) %>
+              |<%= link_to t("index.delete"), micropost.user, method: :delete, class: "btn btn-danger",
               data: {confirm: t("flash.delete")} %>
             <% end %>
           <% end %>
@@ -30,7 +31,7 @@
             <span class="glyphicon glyphicon-time"></span><%= t "home.posted_on" %>
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="image post">
+          <%= image_tag micropost.picture.big_image.url%>
         <p></p>
         <a class="btn btn-primary" href="#"><%= t "home.btb_read_more" %>
           <span class="glyphicon glyphicon-chevron-right"></span>
@@ -41,4 +42,4 @@
     <% end %>
   </div>
 </div>
-<%= will_paginate %>
+<%= will_paginate @microposts%>

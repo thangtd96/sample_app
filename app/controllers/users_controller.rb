@@ -5,9 +5,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.select(:id, :name, :email).activated
-      .order(:name).paginate page: params[:page], per_page: Settings.paginate
-
+    @microposts = current_user.feed
+      .paginate page: params[:page], per_page: Settings.paginate
     @micropost = current_user.microposts.build if logged_in?
   end
 
@@ -52,6 +51,20 @@ class UsersController < ApplicationController
     else
       flash.now[:danger] =  t "flash.not_delete"
     end
+  end
+
+  def following
+    @title = "Following"
+    @user  = User.find params[:id]
+    @users = @user.following.paginate page: params[:page], per_page: Settings.paginate
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @user  = User.find params[:id]
+    @users = @user.followers.paginate page: params[:page], per_page: Settings.paginate
+    render "show_follow"
   end
 
   private
