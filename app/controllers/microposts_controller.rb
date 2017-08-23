@@ -8,7 +8,6 @@ class MicropostsController < ApplicationController
     if @micropost.save
       flash[:success] = t "post.flash_success"
     else
-      @micropost = []
       flash[:danger] = erros_create @micropost
     end
 
@@ -28,7 +27,7 @@ class MicropostsController < ApplicationController
   private
 
   def micropost_params
-    params.require(:micropost).permit :content
+    params.require(:micropost).permit :content, :picture
   end
 
   def correct_user
