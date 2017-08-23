@@ -13,4 +13,15 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
+
+  def verify_admin!
+    return if logged_in?
+    store_location
+    flash[:danger] =  t "flash.login"
+    redirect_to login_url
+  end
+
+  def erros_create message
+    message.errors.full_messages
+  end
 end
