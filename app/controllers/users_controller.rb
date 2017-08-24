@@ -5,9 +5,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.select(:id, :name, :email).activated
-      .order(:name).paginate page: params[:page], per_page: Settings.paginate
-
+    @microposts = Micropost.created_sort
+      .paginate page: params[:page], per_page: Settings.paginate
     @micropost = current_user.microposts.build if logged_in?
   end
 
